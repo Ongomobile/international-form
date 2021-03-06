@@ -249,6 +249,7 @@ label {
   text-decoration: none;
 }
 .form-close-btn {
+  z-index: 20;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

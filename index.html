@@ -55,7 +55,7 @@
           class="image"
         />
         <div class="form-content-right">
-          <a href="#" class="form-close-btn w-inline-block">
+          <a href="#" id="close-btn" class="form-close-btn w-inline-block">
             <div class="close-text">X</div>
           </a>
           <div class="form-top-content">
@@ -94,6 +94,19 @@
         </div>
       </div>
     </div>
+    <script>
+      const closeBtn = document.querySelector(".form-close-btn");
+      const closeBtnDesktop = document.querySelector("#close-btn");
+      const modal = document.querySelector(".form-wrapper");
+
+      closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+
+      closeBtnDesktop.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+    </script>
   </body>
   <script>
     const phoneInputField = document.querySelector("#phoneInput");
