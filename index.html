@@ -78,6 +78,7 @@
               />
             </form>
             <div class="alert alert-info" style="display: none"></div>
+            <div class="alert alert-error" style="display: none"></div>
           </div>
           <div class="form-bottom-text">
             <p class="paragraph">
@@ -99,13 +100,23 @@
     });
 
     const info = document.querySelector(".alert-info");
+    const error = document.querySelector(".alert-error");
 
     function process(event) {
       event.preventDefault();
 
       const phoneNumber = phoneInput.getNumber();
-      info.style.display = "";
-      info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+
+      info.style.display = "none";
+      error.style.display = "none";
+
+      if (phoneInput.isValidNumber()) {
+        info.style.display = "";
+        info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+      } else {
+        error.style.display = "";
+        error.innerHTML = `Invalid phone number.`;
+      }
       phoneInputField.value = "";
     }
   </script>
