@@ -293,6 +293,7 @@ label {
     display: none;
   }
   .main {
+    height: 900px;
     background-position: 65% 100%;
     background-size: cover;
     background-attachment: fixed;
