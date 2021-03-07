@@ -101,7 +101,7 @@ label {
   width: 100vw;
   height: 100vh;
   background-image: url("../images/longTailBoats.jpg");
-  background-position: 0px 0px;
+  background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -158,7 +158,6 @@ label {
 }
 .imgWrapper {
   height: 420px;
-  width: 332px;
 }
 .show {
   display: none;
@@ -297,7 +296,7 @@ label {
     display: none;
   }
   .main {
-    background-position: 65% 100%;
+    background-position: 50% 50%;
     background-size: cover;
     background-attachment: fixed;
   }
@@ -379,7 +378,7 @@ label {
   }
   .main {
     height: 1000px;
-    background-position: 65% 100%;
+    background-position: 50% 50%;
   }
 }
 
