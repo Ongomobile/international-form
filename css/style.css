@@ -222,15 +222,14 @@ label {
   background-color: transparent;
 }
 .form-headline {
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   opacity: 0.9;
   font-family: "Open Sans", sans-serif;
   font-size: 30px;
   font-weight: 700;
 }
 .form-subheadline {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   opacity: 0.9;
 }
 .form-bottom-text {
@@ -239,12 +238,7 @@ label {
   padding-right: 10px;
   padding-left: 10px;
 }
-.paragraph {
-  max-width: 340px;
-  opacity: 0.5;
-  font-family: "Open Sans", sans-serif;
-  font-size: 10px;
-}
+
 .close-text {
   font-family: "Open Sans", sans-serif;
   color: rgba(7, 7, 7, 0.6);
@@ -316,6 +310,9 @@ label {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+  .form-top-content {
+    padding-top: 20px;
   }
   .form-close-btn {
     display: none;

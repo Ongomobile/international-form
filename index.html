@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>International SMS Form</title>
+    <title>International Popup Form</title>
     <link href="css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link
@@ -48,7 +48,7 @@
         <a href="#" class="form-close-btn mobile w-inline-block">
           <div class="close-text mobile">X</div> </a
         ><img
-          src="images/formImg.png"
+          src="images/comfirmedImg.png"
           loading="lazy"
           alt="Be a vip
 "
@@ -59,10 +59,8 @@
             <div class="close-text">X</div>
           </a>
           <div class="form-top-content">
-            <div class="form-headline">BECOME A VIP</div>
-            <div class="form-subheadline">
-              Sign up &amp; get 15% off your first order.
-            </div>
+            <div class="form-headline">Join The Club</div>
+            <div class="form-subheadline">Meet some cool people</div>
           </div>
           <div class="form-block w-form">
             <form id="email-form" name="email-form" onsubmit="process(event)">
@@ -73,6 +71,22 @@
                 maxlength="256"
                 name="phoneInput"
                 id="phoneInput"
+              />
+              <label for="user" class="field-label">First name</label
+              ><input
+                type="text"
+                class="text-field w-input user-input"
+                maxlength="256"
+                name="user"
+                id="user"
+              />
+              <label for="email" class="field-label">Email</label
+              ><input
+                type="text"
+                class="text-field w-input email-input"
+                maxlength="256"
+                name="email"
+                id="email"
               /><input
                 type="submit"
                 value="Subscribe"
@@ -82,14 +96,6 @@
             </form>
             <div class="alert alert-info" style="display: none"></div>
             <div class="alert alert-error" style="display: none"></div>
-          </div>
-          <div class="form-bottom-text">
-            <p class="paragraph">
-              By signing up via text you agree to receive recurring automated
-              marketing messages at the phone number provided. Consent is not a
-              condition of purchase. Reply STOP to unsubscribe. Msg &amp; Data
-              rates may apply.
-            </p>
           </div>
         </div>
       </div>
@@ -114,6 +120,9 @@
     </script>
   </body>
   <script>
+    const nameEntered = document.querySelector(".user-input");
+    const emailEntered = document.querySelector(".email-input");
+
     const phoneInputField = document.querySelector("#phoneInput");
     const phoneInput = window.intlTelInput(phoneInputField, {
       utilsScript:
@@ -133,12 +142,17 @@
 
       if (phoneInput.isValidNumber()) {
         info.style.display = "";
-        info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+        info.innerHTML = `Phone number is: <strong>${phoneNumber}</strong> 
+        Name is:  <strong>${nameEntered.value}</strong> 
+        Email is:  <strong>${emailEntered.value}</strong>`;
       } else {
         error.style.display = "";
         error.innerHTML = `Invalid phone number.`;
       }
+
       phoneInputField.value = "";
+      nameEntered.value = "";
+      emailEntered.value = "";
     }
   </script>
 </html>
