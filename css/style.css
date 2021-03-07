@@ -175,7 +175,7 @@ label {
 }
 .field-label {
   margin-bottom: 10px;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 .image {
   width: 100%;
@@ -229,14 +229,14 @@ label {
 }
 .form-headline {
   margin-bottom: 10px;
-  opacity: 0.9;
+  opacity: 0.5;
   font-family: "Open Sans", sans-serif;
   font-size: 30px;
   font-weight: 700;
 }
 .form-subheadline {
   margin-bottom: 20px;
-  opacity: 0.9;
+  opacity: 0.5;
 }
 .form-bottom-text {
   margin-top: 0px;
